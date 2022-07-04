@@ -16,6 +16,10 @@
 		D90380C328736119007D1F67 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90380C228736119007D1F67 /* NetworkError.swift */; };
 		D90380C62873617B007D1F67 /* AppNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90380C52873617B007D1F67 /* AppNavigation.swift */; };
 		D90380CB28736525007D1F67 /* UIView+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90380CA28736525007D1F67 /* UIView+Anchor.swift */; };
+		D90380CD287368C6007D1F67 /* FilmTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90380CC287368C6007D1F67 /* FilmTableCell.swift */; };
+		D90380CF287369C8007D1F67 /* CellsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90380CE287369C8007D1F67 /* CellsExtension.swift */; };
+		D90380D128736FDF007D1F67 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90380D028736FDF007D1F67 /* CategoryView.swift */; };
+		D90380D328738441007D1F67 /* CategoryCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90380D228738441007D1F67 /* CategoryCollectionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		D90380C228736119007D1F67 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		D90380C52873617B007D1F67 /* AppNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigation.swift; sourceTree = "<group>"; };
 		D90380CA28736525007D1F67 /* UIView+Anchor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Anchor.swift"; sourceTree = "<group>"; };
+		D90380CC287368C6007D1F67 /* FilmTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmTableCell.swift; sourceTree = "<group>"; };
+		D90380CE287369C8007D1F67 /* CellsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellsExtension.swift; sourceTree = "<group>"; };
+		D90380D028736FDF007D1F67 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		D90380D228738441007D1F67 /* CategoryCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +102,9 @@
 		D90380BD28736084007D1F67 /* MainView */ = {
 			isa = PBXGroup;
 			children = (
-				D90380BB28731E6A007D1F67 /* MainViewController.swift */,
-				D90380C0287360B3007D1F67 /* FilmModel.swift */,
+				D90380D428738EF8007D1F67 /* Model */,
+				D90380D528738F00007D1F67 /* View */,
+				D90380D628738F1B007D1F67 /* Controller */,
 			);
 			path = MainView;
 			sourceTree = "<group>";
@@ -112,8 +121,35 @@
 			isa = PBXGroup;
 			children = (
 				D90380CA28736525007D1F67 /* UIView+Anchor.swift */,
+				D90380CE287369C8007D1F67 /* CellsExtension.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		D90380D428738EF8007D1F67 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D90380C0287360B3007D1F67 /* FilmModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D90380D528738F00007D1F67 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D90380CC287368C6007D1F67 /* FilmTableCell.swift */,
+				D90380D028736FDF007D1F67 /* CategoryView.swift */,
+				D90380D228738441007D1F67 /* CategoryCollectionCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D90380D628738F1B007D1F67 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				D90380BB28731E6A007D1F67 /* MainViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,9 +225,13 @@
 				D90380C1287360B3007D1F67 /* FilmModel.swift in Sources */,
 				D90380BC28731E6A007D1F67 /* MainViewController.swift in Sources */,
 				D90380CB28736525007D1F67 /* UIView+Anchor.swift in Sources */,
+				D90380CF287369C8007D1F67 /* CellsExtension.swift in Sources */,
+				D90380D128736FDF007D1F67 /* CategoryView.swift in Sources */,
 				D90380C62873617B007D1F67 /* AppNavigation.swift in Sources */,
 				D90380C328736119007D1F67 /* NetworkError.swift in Sources */,
 				D90380B928730861007D1F67 /* NetworkManager.swift in Sources */,
+				D90380CD287368C6007D1F67 /* FilmTableCell.swift in Sources */,
+				D90380D328738441007D1F67 /* CategoryCollectionCell.swift in Sources */,
 				D90380A4287306C1007D1F67 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
