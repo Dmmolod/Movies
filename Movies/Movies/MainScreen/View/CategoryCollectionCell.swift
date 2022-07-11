@@ -22,6 +22,12 @@ class CategoryCollectionCell: UICollectionViewCell {
         return categoryTitle
     }()
     
+    override var isSelected: Bool {
+        didSet {
+            categoryTitle.layer.borderColor = isSelected ? UIColor.systemPink.cgColor : UIColor.label.cgColor
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -33,11 +39,11 @@ class CategoryCollectionCell: UICollectionViewCell {
 
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
+    required init?(coder: NSCoder) { nil }
     
     func config(text: String) {
         categoryTitle.text = text
     }
+    
+    
 }

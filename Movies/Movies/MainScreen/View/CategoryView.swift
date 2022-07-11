@@ -47,6 +47,14 @@ final class CategoryView: UIView {
                                       paddingTrailing: 10)
     }
     
+    func selectItem(i: Int?) {
+        guard let i = i else { return }
+        
+        let indexPath = IndexPath(item: i, section: 0)
+
+        categoryCollectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)        
+    }
+    
     private func setupDelegate() {
         categoryCollectionView.dataSource = delegate?.setupCollectionViewDataSource()
         categoryCollectionView.delegate = delegate?.setupCollectionViewDelegate()
