@@ -77,14 +77,14 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
                                                        for: indexPath) as? FilmTableCell else { return UITableViewCell() }
         
         let filmForCell = films[indexPath.row]
-        let releaseDate = DateFormatter().stringDate(from: filmForCell.release_date,
+        let releaseDate = DateFormatter().stringDate(from: filmForCell.releaseDate,
                                                      currentFormat: "YY-MM-dd",
                                                      to: "dd.MM.YYYY")
         
-        filmCell.config(posterPath: filmForCell.poster_path,
+        filmCell.config(posterPath: filmForCell.posterPath,
                         title: filmForCell.title,
                         overview: "   " + filmForCell.overview,
-                        voteAverage: String(filmForCell.vote_average),
+                        voteAverage: String(filmForCell.voteAverage),
                         releaseDate: releaseDate)
         
         return filmCell
@@ -111,7 +111,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         guard (scrollView.contentOffset.y + scrollView.frame.size.height) > scrollView.contentSize.height && isPaging,
               let currentFilmsResponse = currentFilmsResponse,
-              currentFilmsResponse.page < currentFilmsResponse.total_pages  else { return }
+              currentFilmsResponse.page < currentFilmsResponse.totalPages  else { return }
         
         isPaging = false
         getFilms(page: currentFilmsResponse.page + 1, completion: {

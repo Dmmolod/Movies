@@ -23,13 +23,25 @@ enum FilmCategory: String, CaseIterable {
 struct FilmsResponse: Decodable {
     let page: Int
     let results: [Film]
-    let total_pages: Int
+    let totalPages: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case page, results
+        case totalPages = "total_pages"
+    }
 }
 
 struct Film: Decodable {
     let id: Int
     let title, overview: String
-    let vote_average: Double
-    let poster_path: String
-    let release_date: String
+    let voteAverage: Double
+    let posterPath: String
+    let releaseDate: String
+    
+    enum CodingKeys: String, CodingKey {
+        case id, title, overview
+        case voteAverage = "vote_average"
+        case posterPath = "poster_path"
+        case releaseDate = "release_date"
+    }
 }
